@@ -2,9 +2,10 @@
 
 package org.example.a
 
-//import kotlin.js.JsExport
+import kotlin.js.JsExport
 import kotlin.js.JsName
 
+@JsExport
 interface BigInt {
     @JsName("plus")
     operator fun plus(other: BigInt): BigInt
