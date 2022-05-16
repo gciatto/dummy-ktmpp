@@ -1,11 +1,8 @@
 plugins {
-    kotlin("multiplatform") version "1.5.21"
+    kotlin("multiplatform")
 }
 
 kotlin {
-    /* Targets configuration omitted. 
-    *  To find out how to configure the targets, please follow the link:
-    *  https://kotlinlang.org/docs/reference/building-mpp-with-gradle.html#setting-up-targets */
     jvm {
         withJava()
     }
