@@ -8,6 +8,8 @@
 
 .idea/
 
+kotlin-js-store/
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml

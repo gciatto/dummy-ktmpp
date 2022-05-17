@@ -2,6 +2,8 @@ plugins {
     kotlin("multiplatform")
 }
 
+val ktCompilerArgs: String by project
+
 kotlin {
     jvm {
         withJava()
@@ -33,6 +35,15 @@ kotlin {
         val jsTest by getting {
             dependencies {
                 implementation(kotlin("test-js"))
+            }
+        }
+    }
+
+    targets.all {
+        compilations.all {
+            kotlinOptions {
+                allWarningsAsErrors = true
+                freeCompilerArgs = freeCompilerArgs + ktCompilerArgs.split(";")
             }
         }
     }
